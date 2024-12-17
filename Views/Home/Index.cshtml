@@ -1,0 +1,112 @@
+﻿@model physics_assignment.Models.SimulationModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elastic Collision Simulation</title>
+    <!-- Include GlowScript libraries -->
+    <script type="text/javascript" src="~/js/glow.3.2.min.js"></script>
+    <!-- Include jQuery and jQuery UI -->
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/jquery/jquery-ui.custom.min.js"></script>
+    <!-- Include SimReal CSS for styling -->
+    <link rel="stylesheet" type="text/css" href="~/css/SimReal_Style.css">
+    <style>
+        /* Add custom styles for the buttons */
+        .small-button {
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            background-color: #6666AA;
+            color: white;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.24),0 6px 20px 0 rgba(0,0,0,0.19);
+        }
+
+        .small-button:hover {
+            background-color: #555599;
+            box-shadow: 0 6px 12px 0 rgba(0,0,0,0.30),0 8px 24px 0 rgba(0,0,0,0.25);
+        }
+    </style>
+</head>
+<body>
+<h1>Elastic Collision Simulation</h1>
+
+<!-- Input Fields for Mass and Velocity -->
+<div>
+    <label for="massA">Mass A:</label>
+    <input type="number" id="massA" value="1">
+</div>
+<div>
+    <label for="massB">Mass B:</label>
+    <input type="number" id="massB" value="1">
+</div>
+
+<!-- Positions -->
+<div>
+    <label for="x1">x1:</label>
+    <input type="number" id="x1" value="-20">
+    <label for="y1">y1:</label>
+    <input type="number" id="y1" value="0.5">
+</div>
+<div>
+    <label for="x2">x2:</label>
+    <input type="number" id="x2" value="20">
+    <label for="y2">y2:</label>
+    <input type="number" id="y2" value="-0.5">
+</div>
+
+<!-- Velocities -->
+<div>
+    <label for="v1x">v1x:</label>
+    <input type="number" id="v1x" value="20">
+    <label for="v1y">v1y:</label>
+    <input type="number" id="v1y" value="0">
+</div>
+<div>
+    <label for="v2x">v2x:</label>
+    <input type="number" id="v2x" value="-10">
+    <label for="v2y">v2y:</label>
+    <input type="number" id="v2y" value="0">
+</div>
+
+<!-- Final Velocities (after collision) -->
+<div>
+    <label for="u1x">u1x:</label>
+    <input type="number" id="u1x" value="20" readonly>
+    <label for="u1y">u1y:</label>
+    <input type="number" id="u1y" value="0" readonly>
+</div>
+<div>
+    <label for="u2x">u2x:</label>
+    <input type="number" id="u2x" value="-10" readonly>
+    <label for="u2y">u2y:</label>
+    <input type="number" id="u2y" value="0" readonly>
+</div>
+
+<!-- Checkbox to toggle center of mass -->
+<div>
+    <input type="checkbox" id="toggleCenterOfMass" checked>
+    <label for="toggleCenterOfMass">Show Center of Mass</label>
+</div>
+
+<!-- Checkbox to toggle velocity vectors -->
+<div>
+    <input type="checkbox" id="toggleVelocityVectors" checked>
+    <label for="toggleVelocityVectors">Show Velocity Vectors</label>
+</div>
+
+<!-- Buttons for starting, pausing, and resetting the simulation -->
+<button id="startSimulation" class="small-button">Start Simulation</button>
+<button id="pauseResumeSimulation" class="small-button" style="display:none;">Pause Simulation</button>
+<button id="resetSimulation" class="small-button">Reset Simulation</button>
+
+<div id="glowscript" class="glowscript"></div>
+
+<!-- Include your custom JS -->
+<script type="text/javascript" src="~/js/ElasticCollision.js"></script>
+</body>
+</html>

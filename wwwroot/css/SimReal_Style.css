@@ -1,0 +1,126 @@
+.button {
+    background-color: #6666AA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    font-family:verdana;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    margin: 4px 2px;
+    width : 100%;
+    cursor: pointer;
+}
+.button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.50),0 17px 50px 0 rgba(0,0,0,0.40);
+}
+.button_SimReal {
+    line-height: 20%;
+}
+.button_sub {
+    background-color: #7777AA;
+    font-size: 16px;
+}
+.button_dev {
+    font-size: 16px;
+    font-family:verdana;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    margin: 4px 2px;
+    width : 200px;
+    cursor: pointer;
+}
+.button_kap {
+    background-color: #777799;
+    font-size: 14px;
+    text-align: left;
+}
+.button_prevNext {
+    background-color: #777799;
+    width : 50%;
+    font-size: 12px;
+    line-height: 10%;
+    text-align: center;
+}
+.button_prev {
+    background-color: #777799;
+    width : 10%;
+    font-size: 12px;
+    line-height: 10%;
+    text-align: center;
+}
+.button_next {
+    background-color: #777799;
+    width : 10%;
+    font-size: 12px;
+    line-height: 10%;
+    text-align: center;
+}
+.button_kap:hover, .button_kap:focus {
+    background-color : #8888AA;
+    box-shadow       : 0 12px 16px 0 rgba(0,0,0,0.50),0 17px 50px 0 rgba(0,0,0,0.40);
+}
+.dropbtn {
+    background-color : #777799;
+    color            : white;
+    padding          : 10px;
+    font-size        : 14px;
+    text-align       : left;
+    box-shadow       : 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    width            : 330px;
+    border           : none;
+    cursor           : pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color : #8888AA;
+    box-shadow       : 0 12px 16px 0 rgba(0,0,0,0.50),0 17px 50px 0 rgba(0,0,0,0.40);
+}
+
+.dropdown {
+    position: relative;
+    display          : inline-block;
+}
+
+.dropdown-content {
+    display          : none;
+    position         : absolute;
+    background-color : #f1f1f1;
+    font-size        : 12px;
+    min-width        : 330px;
+    line-height      : 10%;
+    overflow         : auto;
+    box-shadow       : 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index          : 1;
+}
+
+.dropdown-content a {
+    color            : black;
+    padding          : 12px 16px;
+    text-decoration  : none;
+    display          : block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.dropbtn_da {
+    color            : #0000FF;
+}
+
+.dropbtnK {
+    background-color : #777799;
+    font-size        : 18px;
+    text-align       : center;
+}
+.dropbtnK2 {
+    background-color : #777799;
+    min-width        : 450px;
+    font-size        : 18px;
+    text-align       : center;
+}
+.show {display     : block;}
+
+
+
